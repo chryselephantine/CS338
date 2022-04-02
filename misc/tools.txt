@@ -1,13 +1,30 @@
 Oliver Clay
+
 1. 172.24.214.168
 Source: ifconfig command, shown in-class. 
+
 2. using the command ping (hostname) i.e. ping dns.google gives ip address 8.8.4.4
 Source: https://morgantechspace.com/2015/07/get-hostname-from-ip-address-and-vice.html
-3.Using the command nslookup (ip address) 
+
+3. Using the command nslookup (ip address) 
 Source: https://www.javatpoint.com/get-hostname-from-ip-address
-4.
-5.
-6.
-7.
-8.
-9
+
+4. The command ftp (file transfer protocol) seems to be able to connect to ip addresses and GET or PUT files from a remote host. Yet, ftp seems to be obsolete compared to ssh. 
+Source: https://devconnected.com/4-ways-to-transfer-files-and-directories-on-linux/
+Another source: https://linuxhandbook.com/transfer-files-ssh/
+
+5. netcat -v -w 2 z (ip address) (port), listens to a given port in verbose mode with a 2 second wait and does not send any data.
+Source: https://www.linuxfordevices.com/tutorials/netcat-command-in-linux
+
+6. sudo nmap -sTU -O (IP-address-Here) doing a superuser scan with the nmap command to see all active ports. 
+Source: https://code-paper.com/shell-bash/examples-how-to-view-active-ports-in-linux
+
+7. curl https://www.carleton.edu/student/ > carleton.txt, using the curl command to pipe the contents of carleton's student gateway into a text file.
+Source: https://phoenixnap.com/kb/curl-command
+
+8. curl --head https://www.carleton.edu/student/ similar to the last curl command, but uses the --head flag to return the headers.
+Source: https://alvinalexander.com/linux-unix/how-view-http-headers-command-line-curl-telnet/
+
+9. curl -v --head https://www.carleton.edu/student/ shows the verbose headers, which includes info about the request headers, which is the info your computer (the client) requests the server for. 
+Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+Additional source: https://flaviocopes.com/http-curl/#only-get-the-http-response-headers
