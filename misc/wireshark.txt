@@ -1,0 +1,33 @@
+Oliver Clay
+
+===== DAYTIME =====
+
+1. 1 172.16.4.128 132.163.96.6 TCP [SYN] Seq=0...
+   2 132.163.96.6 172.16.4.128 TCP [SYN, ACK] Seq=0...
+   3 172.16.4.128 132.163.96.6 TCP [ACK] Seq=1...
+
+2. The client (the Kali virtual machine using netcat) uses port 44970. The client needs a port number so the server can send it info without interfering with other processes.
+
+3. 4 132.163.96.6 172.16.4.128 DAYTIME DAYTIME Response
+
+4. 59674 22-04-05 03:30:56 50 0 0 32.3 UTC(NIST) Year Month Day Hour Minute Second Timezone, The 59674 and 50 0 0 do not change upon giving multiple requests to the server, whereas the 32.3 seems somewhat random.
+
+5. Synchronization, "Hey let's talk" in the context of the handshake.
+
+6. Acknowledgement, "I hear you/message recieved"
+
+7. Fin, the "finish up packet", "I'm done talking with you"
+
+8. The client server initiated the closing of the TCP connection. This happened after the server gave it's DAYTIME protocol. The client (the source 172.16.4.128) said [FIN, ACK] "We are done talking because I got your message"
+
+===== HTTP =====
+
+1. 26 different TCP connections were opened in total.
+
+2. Frame #7. This frame is the first HTTP request, and includes GET /index.html. 
+
+3. Frame #11. This frame's info says GET /jeff_square_head.jpg
+
+===== QUESTIONS =====
+
+I had a lot of trouble with DAYTIME question 4. The additional info is not discussed in the daytime protocol and seems somewhat random at times. I'd like to know a bit more about what it is and how to figure that out.
