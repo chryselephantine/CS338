@@ -1,3 +1,24 @@
 Oliver Clay
 
 ========Diffie-Hellman========
+
+The shared secret between alice and bob is 36.
+This was somewhat tedious to compute. I used a brute-force method of trying every possible number (with the upper bound for X or Y being less than 59).
+Used algebra on the equations ((11**X) % 59 = 57). For X < 59.
+And ((11**Y) % 59 = 44). For Y < 59.
+Once I have those equations satisfied, I plugged them into ((B**X) % 59) and ((A**Y) % 59) for the shared secret. 
+
+This wouldn't work with large integers because I would have to iterate accross a huge number of integers if p was very large.
+This is very doable by something like a for loop in python, yet I believe having to do this would slow Eve down long enough that she would likely miss her window of oprotunity.
+
+========RSA========
+
+I don't understand the mathmatics for how to decode this string of integers. I'm trying very hard to understand.
+Jeff's Office Hours are Friday 12:00 - 1:00 PM. 
+
+
+The attack uses a brute-force approach of sorts because we only have access to the public key. If we want to decode we need Bob's private key.
+We can apply various private keys to the data until we find a result that seems to work. This would not work for very large integers because it is infeasable to do the calculations millions of times searching for a single solution.
+
+The encoding process is independent to the encryption process, i.e. it does not depend on the RSA keys. The encoding can be broken if someone knows the code.
+The encoding could be considered a small extra layer of protecton, but is much more vulnerable to analysis which could solve the code, or simply having the code be leaked.
