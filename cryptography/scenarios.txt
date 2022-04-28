@@ -19,9 +19,9 @@ Bob recieves and decrypts the message C AES_D(K, C).
 Bob was victim to a PITM attack. The PITM passed messages back and forth, fooling Bob into thinking he was talking to Alice and vice versa. believable (assuming PITM attacks are valid again outside scenario #3).
 There were faults in the hardware, someone malicious with very strong magnets, or solar radiation. These outside influences corrupted the contract. Maybe this could fool a judge if Alice was very convincing and faked a thing or two. Depends on how the contract was corrupted.
 
-5.
+5. Sig_CA is the certificate authorities signiture. Broken down, it's E(S_CA
 
-6.
+6. Validating Bob: 
 
 7. Keys are no longer safe. Mal could convince the authority that Bob's keys belongs to her domain, should she get her hands on them, tricking Alice into thinking her setup was Bob's.
-
+Mal could somehow get her hands on the CA's private key, alloving her to create false cetificates claiming her domain is related to Bob's key.
