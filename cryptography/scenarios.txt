@@ -1,12 +1,23 @@
 Oliver Clay
 
 1. Alice and Bob use Diffie-Hellman to agree on a shared secret key K.
+Alice sends the long message with the block cipher AES, AES(K, M).
+Bob recieves and decrypts the message C AES_D(K, C).
 
-2.
+2. In this scenario I assume Alice and Bob are fine with their message being seen, they just don't want it to be edited.
+Alice concatenates the message with a hash of the message using. SHA-256AES: M||H(M). 
+Bob recieves the message and computes H(supplied messages), checking, does H(supplied messages) == H(supplied hash)
 
-3.
+3. Bob is untrusting and sends a message checking if Alice is Alice and has her secret key. Only Alice could decode what he sends. Bob sends E(P_A, M). (No PITM/Assuming key safty)
+Alice decrypts with her secret key, E(S_A, C) = M, and sends the message back to Bob.
+Bob now trusts Alice. They don't want their further talks to be observed.
+Alice and Bob use Diffie-Hellman to agree on a shared secret key K.
+Alice sends the long message with the block cipher AES, AES(K, M).
+Bob recieves and decrypts the message C AES_D(K, C).
 
-4.
+4. Someone managed to brute force decrypt the test Bob sent, stumpling upon Alice's secret key. Not very believable.  
+Bob was victim to a PITM attack. The PITM passed messages back and forth, fooling Bob into thinking he was talking to Alice and vice versa. believable (assuming PITM attacks are valid again outside scenario #3).
+There were faults in the hardware, someone malicious with very strong magnets, or solar radiation. These outside influences corrupted the contract. Maybe this could fool a judge if Alice was very convincing and faked a thing or two.
 
 5.
 
