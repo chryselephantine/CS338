@@ -6,3 +6,17 @@ R = Repudiation
 I = Information leakage (wifi sniffing, looking over your shoulder, ...)
 D = Denial of service (hog the bandwidth, stealing laptop, etc.)
 E = Escalation of Privilege (two customers claim the same drink...?)
+
+List of Threats (and their corresponding mitigations) for 'Tapirs Unlimited':
+
+S: Someone could create a fake ios/android app impersonating your app, but links up to malicious HTTP-based API run by their party. Mitigation: keep a forum where people can report suspicious ativity to help bring these things to your attention, and then contact the app distributer (i.e. Apple) to have them take down the fradulent software. 
+
+T: If the security of Linode is compromised, someone could access the web pages' source and they could change aspects of the web client in malicious ways. Keep backups of the web client outside of Linode and do comparison tests to check if your website has been tampered with.
+
+R: Someone could break into your home office and add a bunch of fake information to the databases, or altering existing information like swapping around credit card numbers. If they cover their tracks well enough it would be hard to tell if this attack was just user/machine error. Mitigation: Don't have securuty weaknesses in areas such as spoofing or tampering, repudiation attacks can happen alongside those attacks. 
+
+I: The database server in your "home office" is a vulnerability. A home office is less secure than keeping something under lock and key in a company building, especially if you have kids. If one of your kids (or one of their friends) is snoopy about tapirs, they could probably leak privy information about user accounts or credit cards, not to mention somebody could break in and steal the device hosting the database. Mitigation: improve security in your home. Make sure your kids don't know the computer password, make sure you lock your doors/windows or simply move the server somewhere more secure.
+
+D: Your home network has a static ip address. This could be subject to a DDoS attack. Mitigation: multiple ip addresses, or non-static ip addresses supporting your database server.
+
+E: The attacker could gain access to an admin account (looking over someones' shoulder, tricking them, etc., or simply breaking into the home office), and use this admin account to make malicious changes through the linode login. Mitigation: keep track of who has admin access, trust them, and use two factor authentication.
