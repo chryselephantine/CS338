@@ -1,0 +1,8 @@
+Oliver Clay
+
+S = Spoofing (e.g. fake wifi network)
+T = Tampering (e.g. sneaky student changes grade while I'm ordering more pastries)
+R = Repudiation
+I = Information leakage (wifi sniffing, looking over your shoulder, ...)
+D = Denial of service (hog the bandwidth, stealing laptop, etc.)
+E = Escalation of Privilege (two customers claim the same drink...?)
