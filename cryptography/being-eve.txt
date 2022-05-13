@@ -13,9 +13,7 @@ This is very doable by something like a for loop in python, yet I believe having
 
 ========RSA========
 
-I don't understand the mathmatics for how to decode this string of integers. I'm trying very hard to understand.
-Jeff's Office Hours are Friday 12:00 - 1:00 PM. 
-
+How to decode this string of integers?
 
 The attack uses a brute-force approach of sorts because we only have access to the public key. If we want to decode we need Bob's private key.
 We can apply various private keys to the data until we find a result that seems to work. This would not work for very large integers because it is infeasable to do the calculations millions of times searching for a single solution.
